@@ -3,7 +3,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Task 3.1 Deployment Successful');
+  const message = process.env.CUSTOM_MESSAGE || 'Default fallback message';
+  res.send(`Task 3.2: ${message}`);
 });
 
 app.listen(port, () => {
