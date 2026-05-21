@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 // Database Connection
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
 });
 
 // Initialize Table
@@ -46,5 +45,5 @@ app.post('/add', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(\`App running on port \${port}\`);
+console.log(`App running on port ${port}`);
 });
